@@ -18,7 +18,16 @@ function processarRequisicao(requisicao) {
             const novaPergunta = { id: dados.length + 1, pergunta, resposta };
             dados.push(novaPergunta);
             return { mensagem: "Pergunta adicionada com sucesso.", dado: novaPergunta };
-
+        
+        case 'EXCLUIR':
+            const indice = dados.findIndex(d => d.nome.toLowerCase() === pergunta.toLowerCase());
+            if (indice !== -1) {
+                const excluido = dados.splice(indice, 1);
+                return { mensagem: "Excluído com sucesso.", dado: excluido[0] };
+            }   else {
+                return { mensagem: "Nenhuma informação foi encontrada." };
+            }
+        
         default:
             return { mensagem: "Ação inválida." };
     }
