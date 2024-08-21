@@ -24,9 +24,9 @@ function solicitarExclusao(pergunta) {
     console.log('Resposta do Servidor:', resposta);
 }
 
-solicitarConsulta("Pergunta", "resposta");
-solicitarListagem("Pergunta", "resposta");
+solicitarConsulta("Pergunta");
+solicitarListagem( );
 solicitarAdicao("Pergunta", "resposta");
-solicitarListagem("Pergunta", "resposta");
-solicitarExclusao("Pergunta", "resposta");
-solicitarListagem("Pergunta", "resposta");
+solicitarListagem( );
+solicitarExclusao("Pergunta");
+solicitarListagem( );
