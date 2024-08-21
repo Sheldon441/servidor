@@ -20,7 +20,7 @@ function processarRequisicao(requisicao) {
             return { mensagem: "Pergunta adicionada com sucesso.", dado: novaPergunta };
         
         case 'EXCLUIR':
-            const indice = dados.findIndex(d => d.nome.toLowerCase() === pergunta.toLowerCase());
+            const remover = dados.findIndex(d => d.nome.toLowerCase() === pergunta.toLowerCase());
             if (indice !== -1) {
                 const excluido = dados.splice(indice, 1);
                 return { mensagem: "Excluído com sucesso.", dado: excluido[0] };
