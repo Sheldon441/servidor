@@ -21,7 +21,7 @@ function processarRequisicao(requisicao) {
         
         case 'EXCLUIR':
             const remover = dados.findIndex(d => d.nome.toLowerCase() === pergunta.toLowerCase());
-            if (indice !== -1) {
+            if (remover !== -1) {
                 const excluido = dados.splice(indice, 1);
                 return { mensagem: "Excluído com sucesso.", dado: excluido[0] };
             }   else {
